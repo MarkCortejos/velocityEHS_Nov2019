@@ -1,0 +1,61 @@
+// Variables
+$bodyBkgC: #EEEEEE;
+$subheadBkgC: #FFFFFF;
+$subheadBrdC: #BFC0CA;
+$sidebarBkgC: #FAFAFA;
+$cardBkgC: #FFFFFF;
+
+$buttonBkgC: #545CA5;
+$buttonFontC: #FFFFFF;
+$accentC: #00B6DE;
+
+$primaryFontC: #1C1D33;
+$secondaryFontC: #494A5C;
+$tertiaryFontC: #323347;
+
+$inputBorderC: #808295;
+
+// FUNCTIONS
+@function convertRem($pixelSize) {
+  $remSize: $pixelSize / 16;
+  @return #{$remSize}rem;
+}
+
+// MIXINS
+@mixin remify($attribute, $pixelSize) {
+  #{$attribute}: $pixelSize + px;
+  #{$attribute}: convertRem($pixelSize); 
+}
+
+@mixin borderStyle($borderColor) {
+  border: 1px solid $borderColor;
+  border-radius: 2.5px;
+}
+
+// GLOBAL STYLING
+html {
+  margin:0;
+  padding:0;
+
+}
+
+body {
+  font-family: 'QuboLig', sans-serif;
+  background-color: $bodyBkgC;
+  color: $primaryFontC;
+  margin:0;
+  padding:0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  display: block;
+  margin:0;
+  padding:0;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,48 @@
+.sidebar {
+  background-color: $sidebarBkgC;
+  width: 250px;
+  padding: 32px 20px;
+  
+  @media (max-width: 1100px) {
+    @include borderStyle($accentC);
+    width: inherit;
+    padding: 0;
+    margin: 12px 16px;
+    background-color: $cardBkgC;
+    height: 45px;
+    padding: 10px;
+  };
+
+  &__title {
+    @include remify(font-size, 16);
+    color: $secondaryFontC;
+    margin-bottom: 18px;
+    border-bottom: 2px solid $accentC;
+    padding-bottom: 5px;
+    width: fit-content;
+    & > i {
+      display:none;
+    }
+
+    @media (max-width: 1100px) {
+      border-bottom: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      & > i {
+        display:inline-block;
+      }
+    }
+  };
+  
+  &__list {
+    @include remify(font-size, 16);
+    color: $tertiaryFontC;
+
+    @media (max-width: 1100px) {
+      display: none;
+    }
+  };
+};

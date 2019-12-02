@@ -1,0 +1,50 @@
+.subheader {
+  background-color: $subheadBkgC;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 76px;
+  padding: 20px;
+  border-bottom: 1px solid $subheadBrdC;
+
+  &__title {
+    @include remify(font-size, 27);
+    @media (max-width: 355px) {
+      @include remify(font-size, 24);
+    }
+  };
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+    &--lg {
+      @media (max-width: 970px) {
+        display:none;
+      }
+    };
+    
+    &--sm {
+      display: none;
+      & > .subheader__button {
+        width: 127px;
+      }
+      @media (max-width: 970px) {
+        display: flex;
+      }
+    };
+  };
+
+  &__button {
+    margin: 0 0.2px;
+    &:first-of-type {
+      border-radius: 2.5px 0 0 2.5px;
+    };
+    &:last-of-type {
+      border-radius: 0 2.5px 2.5px 0;
+    };
+  };
+}

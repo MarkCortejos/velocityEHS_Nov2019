@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/46c2d0b628.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/fonts/qubo_light_macroman/stylesheet.css"> 
+    <!-- Can only use Qubo Light for free as Qubo Medium is a paid font, will use bold Qubo Light as replacement -->
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Technical Test Nov 2019</title>
+  </head>
+
+  <body class="wrapper">
+    <section class="subheader">
+      <h1 class="subheader__title">{Category Title} ({State})</h1>
+      <div class="subheader__menu subheader__menu--lg">
+        <button class="button subheader__button">{Transition Title}</button>
+        <button class="button subheader__button">{Transition Title}</button>
+        <button class="button subheader__button">Attach</button>
+        <button class="button subheader__button">Save</button>
+        <button class="button subheader__button">More <i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+      </div>
+      <div class="subheader__menu subheader__menu--sm">
+        <button class="button subheader__button button--triggerFlyout">Actions <i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+        <ul class="flyout flyout--hidden">
+          <li><button class="button flyout__button">{Transition Title}</button></li>
+          <li><button class="button flyout__button">{Transition Title}</button></li>
+          <li><button class="button flyout__button">Attach</button></li>
+          <li><button class="button flyout__button">Save</button></li>
+          <li><button class="button flyout__button">Delete</button></li>
+        </ul>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <h3 class="sidebar__title">{Tab Title} <i class="fas fa-caret-down" aria-hidden="true"></i></h3>
+      <ul class="sidebar__list">Attachments
+        <!-- <li></li> -->
+      </ul>
+    </aside>
+
+    <main class="card">
+      <h2 class="card__title">{Component Title}</h2>
+      <form class="form" action="">
+        <div class="form__group">
+          <label class="form__title" for="text-input">{Field Title}</label>
+          <input class="form__text" type="text" name="text-input" id="text-input">
+        </div>
+        <div class="form__group">
+          <label class="form__title" for="text-area">{Field Title}</label>
+          <textarea class="form__textarea" name="text-area" id="text-area"></textarea>
+        </div>
+        <div class="form__group">
+          <label class="form__title" for="selection-1">{Field Title} (Required)</label>
+          <select class="form__select" name="selection-1" id="selection-1" required>
+            <option value="" selected>Select...</option>
+            <option value="">{Option 1}</option>
+            <option value="">{Option 2}</option>
+          </select>
+        </div>
+        <div class="form__group">
+          <label class="form__title" for="selection-2">{Field Title} (Required)</label>
+          <select class="form__select" name="selection-2" id="selection-1" required>
+            <option value="" selected>Select...</option>
+            <option value="">{Option 1}</option>
+            <option value="">{Option 2}</option>
+          </select>
+        </div>
+        <div class="form__group">
+          <label class="form__title" for="date-picker">{Field Title}</label>
+          <input class="form__date" name ="date-picker" id="date-picker" type="text" placeholder="mm/dd/yyyy">
+          <label class="calendar" for="date-picker"><i class="far fa-calendar-alt" aria-hidden="true"></i></label>
+        </div>
+      </form>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>

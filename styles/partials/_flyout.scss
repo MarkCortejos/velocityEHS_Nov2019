@@ -1,0 +1,33 @@
+.flyout {
+  @include borderStyle($buttonBkgC);
+  background-color: $buttonBkgC;
+  display: block;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  transition: all .3s;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  z-index: 10;
+  
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent $buttonBkgC transparent;
+    top: -20.5px;
+    left: 124px;
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &__button {
+    text-align: left;
+    width: 100%;
+
+  };
+}
