@@ -34,6 +34,13 @@
   
   &__select {
     color: $secondaryFontC;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("../assets/caret-down.png");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 13px;
   }
 
   &__date {

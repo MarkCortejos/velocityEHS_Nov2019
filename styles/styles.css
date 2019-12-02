@@ -375,7 +375,14 @@ ul {
     height: 148px;
     resize: none; }
   .form__select {
-    color: #494A5C; }
+    color: #494A5C;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("../assets/caret-down.png");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 13px; }
   .form__date {
     max-width: 150px; }
     .form__date::-webkit-input-placeholder {
